@@ -15,6 +15,7 @@ require('telescope').load_extension('fzf')
 require("telescope").load_extension "file_browser"
 
 vim.keymap.set("n", "<leader>tf", "<cmd>Telescope find_files<cr>", { noremap=true })
+vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files<cr>", { noremap=true })
 vim.keymap.set("n", "<leader>tr", "<cmd>Telescope grep_string<cr>", { noremap=true })
 vim.keymap.set("n", "<leader>te", "<cmd>Telescope file_browser<cr>", { noremap=true })
 vim.keymap.set("n", "<leader>td", "<cmd>Telescope diagnostics<cr>", { noremap=true })
