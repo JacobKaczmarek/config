@@ -15,3 +15,21 @@ Run this git commands
 config config --local status.showUntrackedFiles no
 config checkout
 ```
+
+# Vim config
+
+## Installed plugins
+ - packer.nvim
+ - vim-tmux-navigator
+ - nvim-lspconfig
+ - nvim-cmp
+ - LuaSnip
+ - nvim-treesitter
+
+### TODO
+ - telescope
+ - lualine
+ - comment.nvim
+
+## Keybindings
+TODO
