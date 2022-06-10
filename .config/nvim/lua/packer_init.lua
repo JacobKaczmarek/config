@@ -1,16 +1,28 @@
 return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    
+
     use {
             "goolord/alpha-nvim",
             config = function()
                 require("plugins/alpha") -- include you config
             end,
-        }
+    }
     
-    use 'christoomey/vim-tmux-navigator'
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = {
+            'kyazdani42/nvim-web-devicons', -- optional, for file icon
+        },
+        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
+   
+    use 'christoomey/vim-tmux-navigator'
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'
@@ -21,6 +33,7 @@ return require('packer').startup(function()
     use 'saadparwaiz1/cmp_luasnip'
 
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use 'kdheepak/lazygit.nvim'
 
     -- Telescope
     use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/plenary.nvim'} }}
