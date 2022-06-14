@@ -23,6 +23,8 @@ return require('packer').startup(function()
     }
    
     use 'christoomey/vim-tmux-navigator'
+
+    use 'williamboman/nvim-lsp-installer'
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'
