@@ -1,4 +1,4 @@
-local servers = { 'volar', 'sumneko_lua', 'eslint', 'tsserver' }
+local servers = { 'volar', 'sumneko_lua', 'eslint', 'tsserver', 'pyright' }
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
@@ -16,4 +16,16 @@ for _, lsp in pairs(servers) do
         vim.keymap.set("n", "gk", vim.diagnostic.goto_prev, { buffer=0 })
         end,
     }
+end
+
+local signs = {
+    Error = " ",
+    Warning = " ",
+    Hint = " ",
+    Information = " "
+}
+
+for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
 end
