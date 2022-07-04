@@ -36,4 +36,3 @@ local cmp = require'cmp'
     })
   })
 
-  -- Setup lspconfig.
